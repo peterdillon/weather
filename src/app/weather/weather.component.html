@@ -1,0 +1,32 @@
+<div class="container">
+    <div>
+        <input
+        type="text"
+        (change)="setInputTemperature($event)"
+        type="number" />
+        <br>
+    <button
+      class="temperature-button"
+      (click)="setTemperature()">
+      Add Fahrenheit Temperature
+    </button>
+    <br>
+    <button
+      class="temperature-button"
+      (click)="addSubscription()">
+      Add New Subscription
+    </button>
+    <br>
+    <button
+      class="temperature-button"
+      (click)="removeSubscription()">
+      Remove Subscription
+    </button>
+    </div>
+    <div>
+        <span *ngIf="!temperatureDataList.length">No Values Listed</span>
+      <span *ngIf="temperatureDataList.length">Replayed Subscription Values</span>
+      <li *ngFor="let temp of temperatureDataList">{{ temp }} F</li>
+    </div>
+</div>
+    

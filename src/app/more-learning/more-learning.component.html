@@ -1,0 +1,30 @@
+<div class="container">
+    <div>
+        <input type="text" type="number" />
+        <br>
+        <!-- 
+            (change)="setInputTemperature($event)"
+            (click)="setTemperature()" 
+        -->
+        <button>
+            Add Things
+        </button>
+        <br>
+        <button (click)="setData()" >
+            Add Storage
+        </button>
+        <br>
+        <button (click)="removeData()" >
+            Empty Storage
+        </button>
+    </div>
+    <div>
+        Result:<br>
+        <li *ngFor="let item of dataList">{{ item | slice : 0 : 8 }}</li>
+        <!-- {{ dataList }} -->
+        <br><br>
+        Result:<br>
+        <li *ngFor="let item of dataList2">{{ item }}</li>
+    </div>
+</div>
+    
