@@ -6,6 +6,7 @@ import { MoreLearningComponent } from './more-learning/more-learning.component';
 const routes: Routes = [
   { path: 'weather', component: WeatherComponent },
   { path: 'more', component: MoreLearningComponent },
+  { path: '', redirectTo: 'more', pathMatch: 'full' },
 ];
 
 @NgModule({

@@ -20,7 +20,8 @@
     </div>
     <div>
         Result:<br>
-        <li *ngFor="let item of dataList">{{ item | slice : 0 : 8 }}</li>
+        <!-- | slice : 0 : 8  -->
+        <li *ngFor="let item of dataList">{{ item }}</li>
         <!-- {{ dataList }} -->
         <br><br>
         Result:<br>
